@@ -1,7 +1,7 @@
 org 0x7e00
 jmp 0x0000:start
 
-putchar:
+_putchar:
 	mov si, sp
 	mov al, [si+2]
 
@@ -21,12 +21,12 @@ putchar:
 %endmacro
 
 start:
-xor ax, ax
-xor bx, bx
+    xor ax, ax
+    xor bx, bx
 
-mov ah, 00h
-mov al, 00h
-int 10h
+    mov ah, 00h
+    mov al, 00h
+    int 10h
 
 mov ax, 'y'
 
